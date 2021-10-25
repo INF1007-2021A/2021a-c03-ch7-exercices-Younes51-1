@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import math
-import sys
-#sys.path.insert(1, r'C:\Users\youne\Documents\GitHub\c03-ch6-1-exercices-Younes51-1')
-#from exercice import frequence
+from exercice_ch6 import frequence
 from turtle import *
 import re
 
@@ -69,8 +67,8 @@ def check_dna():
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
-    draw_tree()
+    #draw_tree()
     print(compute_volume_and_mass())
-    #print((lambda sentence: sorted(frequence(sentence), key=frequence(sentence).__getitem__)[-1])("big big test bb"))
+    print((lambda sentence: sorted(frequence(sentence),key=frequence(sentence).__getitem__)[-1]))
     check_dna()
 

@@ -5,9 +5,7 @@
 import math
 import re
 from turtle import *
-import sys
-sys.path.insert(1,'C:\Users\youne\Documents\GitHub\c03-ch6-1-exercices-Younes51-1')
-from exercice import frequence
+from exercice_ch6 import frequence
 # TODO: Définissez vos fonction ici
 def ellipsoide(a,b,c,mv) :
     volume=4/3*math.pi*a*b*c
@@ -61,5 +59,5 @@ if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
     print(ellipsoide(2,5,4,15))
     ADN()
-    print(lambda sentence: sorted(frequence(sentence),key=frequence(sentence)))
+    print((lambda sentence: sorted(frequence(sentence),key=frequence(sentence).__getitem__)[-1]))
     arbre()
