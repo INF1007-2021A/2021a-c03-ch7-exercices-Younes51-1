@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# TODO: Importez vos modules ici
+# modules :
+
 import math
 import re
 from turtle import *
 from exercice_ch6 import frequence
-# TODO: Définissez vos fonction ici
+
+# fonction :
+
 def ellipsoide(a,b,c,mv) :
     volume=4/3*math.pi*a*b*c
     masse=mv*volume
@@ -26,10 +29,10 @@ def saisie(a):
     else :
         return saisie(a)
 
-def propotion(chaine,sequence):
+def propotion(chaine : str,sequence : str) -> float :
     return chaine.count(sequence)/len(chaine)
 
-def ADN():
+def ADN() :
     chaine=saisie('chaine')
     sequence=saisie('sequence')
     print(chaine)
@@ -58,7 +61,7 @@ def tri(phrase):
     return sorted(frequence(phrase).items(), key=lambda item : item[1])[-1]
 
 if __name__ == '__main__':
-    # TODO: Appelez vos fonctions ici
+    # Appel 
     print(ellipsoide(2,5,4,15))
     ADN()
     phrase="hello"
