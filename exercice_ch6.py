@@ -48,7 +48,7 @@ def get_recipes():
     ingredients = []
 
     ingredient = input("Give an ingredient: ")
-    while ingredient:
+    while ingredient!=" ":
         ingredients.append(ingredient)
         ingredient = input("Give an ingredient: ")
 

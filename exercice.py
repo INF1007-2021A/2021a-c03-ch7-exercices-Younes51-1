@@ -10,7 +10,7 @@ from exercice_ch6 import frequence
 def ellipsoide(a,b,c,mv) :
     volume=4/3*math.pi*a*b*c
     masse=mv*volume
-    return volume,masse
+    return masse, volume
 
 def valide(value) :
     for i in range(len(value)):
@@ -20,7 +20,7 @@ def valide(value) :
             return False
 
 def saisie(a):
-    value=input(f'entrez une {a} d ADN')
+    value=input(f'entrez une {a} d ADN : ')
     if valide(value):
         return value
     else :
@@ -54,10 +54,13 @@ def arbre() :
     branch(70,7,35)
     done()
 
+def tri(phrase):
+    return sorted(frequence(phrase).items(), key=lambda item : item[1])[-1]
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
     print(ellipsoide(2,5,4,15))
     ADN()
-    print((lambda sentence: sorted(frequence(sentence),key=frequence(sentence).__getitem__)[-1]))
+    phrase="hello"
+    print(tri(phrase))
     arbre()
